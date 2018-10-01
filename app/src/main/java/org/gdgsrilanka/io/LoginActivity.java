@@ -8,6 +8,14 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.facebook.AccessToken;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
+import com.facebook.login.LoginManager;
+import com.facebook.login.LoginResult;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -21,6 +29,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+import java.util.Arrays;
+
 public class LoginActivity extends AppCompatActivity {
 
     public static final String TAG = "MainActivity";
@@ -30,15 +40,19 @@ public class LoginActivity extends AppCompatActivity {
     com.google.android.gms.common.SignInButton signInButton;
     ImageView bg;
 
+    CallbackManager callbackManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
 
         signInButton = findViewById(R.id.sign_in_button);
         signInButton = findViewById(R.id.sign_in_button);
 
         firebaseAuth = FirebaseAuth.getInstance();
+
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
@@ -47,6 +61,27 @@ public class LoginActivity extends AppCompatActivity {
             finish();
         }
 
+        callbackManager = CallbackManager.Factory.create();
+
+        callbackManager = CallbackManager.Factory.create();
+
+        LoginManager.getInstance().registerCallback(callbackManager,
+                new FacebookCallback<LoginResult>() {
+                    @Override
+                    public void onSuccess(LoginResult loginResult) {
+                        // App code
+                    }
+
+                    @Override
+                    public void onCancel() {
+                        // App code
+                    }
+
+                    @Override
+                    public void onError(FacebookException exception) {
+                        // App code
+                    }
+                });
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -76,9 +111,10 @@ public class LoginActivity extends AppCompatActivity {
         startActivityForResult(AuthIntent, RequestSignInCode);
     }
 
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
+        callbackManager.onActivityResult(requestCode, resultCode, data);
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == RequestSignInCode){
@@ -94,6 +130,12 @@ public class LoginActivity extends AppCompatActivity {
 
         }
     }
+
+
+    AccessToken accessToken = AccessToken.getCurrentAccessToken();
+    boolean isLoggedIn = accessToken != null && !accessToken.isExpired();
+
+    LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("public_profile"));
 
     public void FirebaseUserAuth(GoogleSignInAccount googleSignInAccount) {
 
