@@ -76,7 +76,7 @@ public class Questions extends Fragment {
 
                         myRef.updateChildren(childUpdates);
 
-                        Toast.makeText(getContext(),"Question successfully posted.",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(), R.string.quest_posted,Toast.LENGTH_SHORT).show();
                         question.setText("");
 
                     }

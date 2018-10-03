@@ -10,4 +10,27 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="time_duration">10.00 PM - 11.30 PM</string>
+    <string name="keynote_dialog_google">Keynote by Dialog and Google</string>
+    <string name="feedback">FEEDBACK</string>
+    <string name="your_message">Enter your message here</string>
+    <string name="send_feedback">SEND FEEDBACK</string>
+    <string name="questions_and_answers">QUESTIONS AND ANSWERS</string>
+    <string name="your_question">Enter your question here.</string>
+    <string name="ask">ASK</string>
+    <string name="speaker_role">Speaker Role</string>
+    <string name="speaker_name">Speaker Name</string>
+    <string name="logout">Logout</string>
+    <string name="agenda">Agenda</string>
+    <string name="qna">QnA</string>
+    <string name="speakers">Speakers</string>
+    <string name="ticket_info">Ticket Info</string>
+    <string name="google_io_sri_lanks">Google I/O Extended Sri Lanka</string>
+    <string name="login_with_fb_canceled">Login With Facebook Canceled</string>
+    <string name="error_login">Error, Login Failed</string>
+    <string name="something_went_wrong">Something Went Wrong</string>
+    <string name="logout_success">Logout Successfully</string>
+    <string name="feedback_enter">Please enter your feedback.</string>
+    <string name="quest_posted">Question successfully posted.</string>
+    <string name="requires_internet_connection">This feature requires an internet connection.</string>
 </resources>

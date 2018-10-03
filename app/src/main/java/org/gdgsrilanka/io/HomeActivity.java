@@ -186,7 +186,7 @@ public class HomeActivity extends AppCompatActivity {
                 new ResultCallback() {
                     @Override
                     public void onResult(@NonNull Result result) {
-                        Toast.makeText(HomeActivity.this, "Logout Successfully", Toast.LENGTH_LONG).show();
+                        Toast.makeText(HomeActivity.this, R.string.logout_success, Toast.LENGTH_LONG).show();
                         Intent homedir = new Intent(HomeActivity.this,LoginActivity.class);
                         startActivity(homedir);
                         finish();

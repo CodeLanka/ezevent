@@ -64,7 +64,7 @@ public class Ticket extends Fragment {
                 checkTicket.execute(email,token);
             }
         } else {
-            Toast.makeText(getContext(),"This feature requires an internet connection.",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), R.string.requires_internet_connection,Toast.LENGTH_SHORT).show();
         }
 
         return v;

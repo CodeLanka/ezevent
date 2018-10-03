@@ -96,12 +96,12 @@ public class LoginActivity extends AppCompatActivity {
 
                     @Override
                     public void onCancel() {
-                        Snackbar.make(mRelativeLayout, "Login With Facebook Canceled", Snackbar.LENGTH_SHORT).show();
+                        Snackbar.make(mRelativeLayout, R.string.login_with_fb_canceled, Snackbar.LENGTH_SHORT).show();
                     }
 
                     @Override
                     public void onError(FacebookException exception) {
-                        Snackbar.make(mRelativeLayout, "Error, Login Failed", Snackbar.LENGTH_SHORT).show();
+                        Snackbar.make(mRelativeLayout, R.string.error_login, Snackbar.LENGTH_SHORT).show();
                     }
                 });
 
@@ -135,7 +135,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void failure(TwitterException exception) {
-                Snackbar.make(mRelativeLayout, "Error, Login Failed", Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(mRelativeLayout, R.string.error_login, Snackbar.LENGTH_SHORT).show();
             }
         });
 
@@ -195,7 +195,7 @@ public class LoginActivity extends AppCompatActivity {
                             finish();
 
                         }else {
-                            Toast.makeText(LoginActivity.this,"Something Went Wrong",Toast.LENGTH_LONG).show();
+                            Toast.makeText(LoginActivity.this, R.string.something_went_wrong,Toast.LENGTH_LONG).show();
                         }
                     }
                 });
