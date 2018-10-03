@@ -54,7 +54,7 @@ public class Questions extends Fragment {
             @Override
             public void onClick(View view) {
                 if(question.getText().toString().trim().length() == 0){
-                    Toast.makeText(getContext(), "Please enter your question.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), getString(R.string.toast_enter_question), Toast.LENGTH_SHORT).show();
                 } else {
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                     if (user != null) {
@@ -76,7 +76,7 @@ public class Questions extends Fragment {
 
                         myRef.updateChildren(childUpdates);
 
-                        Toast.makeText(getContext(),"Question successfully posted.",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getContext(),getString(R.string.toast_question_posted),Toast.LENGTH_SHORT).show();
                         question.setText("");
 
                     }

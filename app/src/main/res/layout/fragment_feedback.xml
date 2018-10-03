@@ -34,7 +34,7 @@
             android:background="@drawable/edittext"
             android:fontFamily="@font/product_sans_regular"
             android:gravity="top|left"
-            android:hint="Enter your message here"
+            android:hint="@string/feedback_hint"
             android:inputType="textMultiLine"
             android:lines="5"
             android:padding="10dp"
@@ -49,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:fontFamily="@font/product_sans_regular"
-            android:text="SEND FEEDBACK"
+            android:text="@string/feedback_fbsubmit"
             android:theme="@style/AppTheme.Button" />
 
     </LinearLayout>

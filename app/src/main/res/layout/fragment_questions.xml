@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:fontFamily="sans-serif-condensed"
-            android:text="QUESTIONS AND ANSWERS"
+            android:text="@string/question_heading"
             android:textAlignment="center"
             android:textColor="#fff"
             android:textSize="19sp" />
@@ -40,7 +40,7 @@
             android:fontFamily="@font/product_sans_regular"
             android:textSize="15sp"
             android:padding="10dp"
-            android:hint="Enter your question here."
+            android:hint="@string/question_hint"
             android:textColorHint="#979797"/>
 
         <Button
@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:theme="@style/AppTheme.Button"
-            android:text="ASK"
+            android:text="@string/qssubmit_text"
             android:fontFamily="@font/product_sans_regular"/>
 
     </LinearLayout>

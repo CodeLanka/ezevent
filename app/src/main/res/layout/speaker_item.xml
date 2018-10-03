@@ -46,7 +46,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
                     android:fontFamily="@font/product_sans_regular"
-                    android:text="Speaker Name"
+                    android:text="@string/speaker_title"
                     android:textAlignment="viewStart"
                     android:textColor="#fff"
                     android:textSize="15sp" />
@@ -58,7 +58,7 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginTop="4dp"
                     android:fontFamily="sans-serif-condensed"
-                    android:text="Speaker Role"
+                    android:text="@string/speaker_role"
                     android:textAlignment="viewStart"
                     android:textColor="#666"
                     android:textSize="13sp" />
