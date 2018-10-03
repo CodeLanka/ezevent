@@ -43,7 +43,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-condensed"
-                    android:text="10.00 PM - 11.30 PM"
+                    android:text="@string/agenda_item_time"
                     android:textColor="#666"
                     android:textSize="11sp" />
 
@@ -52,7 +52,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/product_sans_regular"
-                    android:text="Keynote by Dialog and Google"
+                    android:text="@string/agenda_item_subheading"
                     android:textColor="#fff"
                     android:textSize="13sp"
                     android:layout_marginTop="4dp"/>

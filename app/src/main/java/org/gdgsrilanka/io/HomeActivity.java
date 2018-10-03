@@ -146,7 +146,7 @@ public class HomeActivity extends AppCompatActivity {
         if (id == R.id.action_logout) {
 
             AlertDialog.Builder builder1 = new AlertDialog.Builder(HomeActivity.this);
-            builder1.setMessage("Are you sure you want to logout?");
+            builder1.setMessage(getString(R.string.logout_confirm_message));
             builder1.setCancelable(true);
 
             builder1.setPositiveButton(
@@ -186,7 +186,7 @@ public class HomeActivity extends AppCompatActivity {
                 new ResultCallback() {
                     @Override
                     public void onResult(@NonNull Result result) {
-                        Toast.makeText(HomeActivity.this, "Logout Successfully", Toast.LENGTH_LONG).show();
+                        Toast.makeText(HomeActivity.this, getString(R.string.logout_success_message), Toast.LENGTH_LONG).show();
                         Intent homedir = new Intent(HomeActivity.this,LoginActivity.class);
                         startActivity(homedir);
                         finish();

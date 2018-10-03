@@ -52,7 +52,7 @@ public class Agenda extends Fragment {
         database = FirebaseDatabase.getInstance();
 
         pd = new ProgressDialog(getActivity());
-        pd.setMessage("Loading agenda");
+        pd.setMessage(getString(R.string.progress_dialog_agenda));
         pd.show();
 
         return v;

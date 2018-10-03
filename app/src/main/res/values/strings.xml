@@ -10,4 +10,28 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="agenda_item_time">10.00 PM - 11.30 PM</string>
+    <string name="agenda_item_subheading">Keynote by Dialog and Google</string>
+    <string name="feedback_hint">Enter your message here</string>
+    <string name="feedback_fbsubmit">SEND FEEDBACK</string>
+    <string name="question_hint">Enter your question here.</string>
+    <string name="qssubmit_text">ASK</string>
+    <string name="question_heading">QUESTIONS AND ANSWERS</string>
+    <string name="speaker_title">Speaker Name</string>
+    <string name="speaker_role">Speaker Role</string>
+    <string name="progress_dialog_agenda">Loading agenda</string>
+    <string name="toast_enter_feedback_message">Please enter your feedback.</string>
+    <string name="toast_feedback_successully_sent">Feedback successfully sent.</string>
+    <string name="toast_enter_question">Please enter your question.</string>
+    <string name="toast_question_posted">Question successfully posted.</string>
+    <string name="toast_ticket_internet_connection">This feature requires an internet connection.</string>
+    <string name="progress_dialog_ticket">Getting details</string>
+    <string name="check_ticket_invalid">You have not been selected to attend the event.</string>
+    <string name="logout_confirm_message">Are you sure you want to logout?</string>
+    <string name="logout_success_message">Logout Successfully</string>
+
+    <string name="login_fail_message">Error, Login Failed</string>
+    <string name="fb_login_fail_message">Login With Facebook Canceled</string>
+    <string name="firebase_login_error">Something Went Wrong</string>
 </resources>

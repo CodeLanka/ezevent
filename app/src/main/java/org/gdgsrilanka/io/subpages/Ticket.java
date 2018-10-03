@@ -64,7 +64,7 @@ public class Ticket extends Fragment {
                 checkTicket.execute(email,token);
             }
         } else {
-            Toast.makeText(getContext(),"This feature requires an internet connection.",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(),getString(R.string.toast_ticket_internet_connection),Toast.LENGTH_SHORT).show();
         }
 
         return v;
@@ -107,7 +107,7 @@ public class Ticket extends Fragment {
             super.onPreExecute();
             regprogress = new ProgressDialog(getContext());
             regprogress.setIndeterminate(true);
-            regprogress.setMessage("Getting details");
+            regprogress.setMessage(getString(R.string.progress_dialog_ticket));
             regprogress.show();
         }
 
@@ -153,7 +153,7 @@ public class Ticket extends Fragment {
             regprogress.dismiss();
 
             if(s.matches("invalid")){
-                Toast.makeText(getContext(),"You have not been selected to attend the event.",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(),getString(R.string.check_ticket_invalid),Toast.LENGTH_SHORT).show();
             } else {
                 String[] tokens = s.split("-", -1);
                 ticketno.setText(tokens[0]);
