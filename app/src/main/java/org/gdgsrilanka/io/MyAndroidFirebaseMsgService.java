@@ -34,7 +34,7 @@ public class MyAndroidFirebaseMsgService extends FirebaseMessagingService {
         Uri notificationSoundURI = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder mNotificationBuilder = new NotificationCompat.Builder( this)
                 .setSmallIcon(R.mipmap.ic_launcher)
-                .setContentTitle("Google I/O Extended Sri Lanka")
+                .setContentTitle(getString(R.string.google_io_sri_lanks))
                 .setContentText(messageBody)
                 .setAutoCancel( true )
                 .setSmallIcon(R.drawable.ic_notification_icon)

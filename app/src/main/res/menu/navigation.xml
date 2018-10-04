@@ -4,25 +4,25 @@
     <item
         android:id="@+id/nav_agenda"
         android:icon="@drawable/ic_schedule_black_24dp"
-        android:title="Agenda" />
+        android:title="@string/agenda" />
 
     <item
         android:id="@+id/nav_qna"
         android:icon="@drawable/ic_question_answer_black_24dp"
-        android:title="QnA" />
+        android:title="@string/qna" />
     <item
         android:id="@+id/nav_speakers"
         android:icon="@drawable/ic_people_outline_black_24dp"
-        android:title="Speakers" />
+        android:title="@string/speakers" />
 
     <item
         android:id="@+id/nav_info"
         android:icon="@drawable/ic_info_outline_black_24dp"
-        android:title="Ticket Info" />
+        android:title="@string/ticket_info" />
 
     <item
         android:id="@+id/nav_feedback"
         android:icon="@drawable/ic_feedback_black_24dp"
-        android:title="Feedback" />
+        android:title="@string/feedback" />
 
 </menu>

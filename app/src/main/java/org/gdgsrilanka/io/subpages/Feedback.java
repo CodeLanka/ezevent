@@ -54,7 +54,7 @@ public class Feedback extends Fragment {
             @Override
             public void onClick(View view) {
                 if(question.getText().toString().trim().length() == 0){
-                    Toast.makeText(getContext(), "Please enter your feedback.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), R.string.feedback_enter, Toast.LENGTH_SHORT).show();
                 } else {
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                     if (user != null) {

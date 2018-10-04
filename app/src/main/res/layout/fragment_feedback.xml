@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="15dp"
             android:fontFamily="sans-serif-condensed"
-            android:text="FEEDBACK"
+            android:text="@string/feedback"
             android:textAlignment="center"
             android:textColor="#fff"
             android:textSize="19sp" />
@@ -34,7 +34,7 @@
             android:background="@drawable/edittext"
             android:fontFamily="@font/product_sans_regular"
             android:gravity="top|left"
-            android:hint="Enter your message here"
+            android:hint="@string/your_message"
             android:inputType="textMultiLine"
             android:lines="5"
             android:padding="10dp"
@@ -49,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:fontFamily="@font/product_sans_regular"
-            android:text="SEND FEEDBACK"
+            android:text="@string/send_feedback"
             android:theme="@style/AppTheme.Button" />
 
     </LinearLayout>
